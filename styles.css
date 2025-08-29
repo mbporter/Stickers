@@ -1,0 +1,103 @@
+body{
+    background-color: #4169E1;
+
+}
+
+#main-header{
+    background-color: white;
+    border: 5px lightblue solid;
+    display: block;
+    text-align: center;
+}
+
+.main-content, #project{
+   display: flex;
+   flex: 1;
+   flex-wrap: wrap;
+}
+
+#ass-1,#ass-2,#ass-3, #pro-1, #pro-2, #ass-5, #ass-7, #pro-3, #ass-8, #pro-4 , #ass-9, #pro-45, #ass-10,#ass-11, #node, #pro-5, #pro-6, #ass-14, #ass-15, #final {
+    background-color: aquamarine;
+    display: table;
+    border: 5px solid deepskyblue;
+    margin: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    float: left;
+    clear: both;
+    width: 33%;
+}
+
+footer{
+    text-align: center;
+    color: #AAAAAA;
+}
+
+a:hover{
+    color: red;
+ }
+a{
+    text-decoration: none;
+}
+
+#pro{
+    text-align: center;
+    border: solid lightgreen 2px;
+    background-color: cornflowerblue;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#main-nav ul {
+    padding-left: 0px;
+    list-style: none;
+}
+#main-nav li {
+    background-color: #949292;
+    padding: 10px;
+    margin: auto;
+}
+#main-nav a {
+    text-decoration: none;
+    color:white;
+}
+#menu-items li {
+    text-align: center;
+}
+.padded-area {
+    padding: 5px;
+    margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .main-content{
+        display: flex;
+        flex-wrap: wrap;
+        flex: auto;
+    }
+
+    #ass-1,#ass-2,#ass-3, #pro-1, #pro-2, #ass-5, #ass-7, #pro-3, #ass-8, #pro-4, #ass-9, #pro-45, #ass-10,#ass-11, #node, #pro-5, #pro-6, #ass-14, #ass-15, #final{
+        flex: 1;
+    }
+    #menu-items {
+        display: flex;
+    }
+
+    #menu-items li {
+        flex: 1;
+    }
+
+    #menu-items a {
+        border-bottom: 3px solid transparent;
+    }
+
+    #menu-items a:hover {
+        border-bottom: 3px solid rgb(160, 153, 153);
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+}
