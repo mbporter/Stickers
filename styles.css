@@ -27,6 +27,11 @@ body{
     background-color: #ffffff; /* white */
     border: solid #e74c3c 5px; /* bright red */
     margin-top: 40px;
+    
+}
+
+#text-box h2 {
+    
 }
 
 .main-content, #project{
@@ -258,5 +263,48 @@ body{
         max-width: 500px;
         min-width: 300px;
         box-sizing: border-box;
+    }
+}
+
+@media (max-width: 600px) {
+    #flipbook {
+        width: 98vw;
+        padding: 8px;
+        margin: 12px auto;
+    }
+    .flipbook-inner {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .flipbook-img {
+        width: 80vw;
+        max-width: 220px;
+        height: auto;
+        margin: 6px 0;
+    }
+    #flipbook button {
+        font-size: 1.5rem;
+        margin: 6px 0;
+    }
+    #flipbook-pages {
+        flex-wrap: wrap;
+        gap: 2px;
+        margin: 6px 0 0 0;
+    }
+    .page-btn {
+        font-size: 0.9rem;
+        min-width: 22px;
+        min-height: 22px;
+        padding: 2px 6px;
+    }
+    #main-header, #main-nav, #text-box, #project, #pro, footer {
+        padding: 6px;
+        font-size: 1rem;
+    }
+    .main-content, #project, #stickers {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
 }

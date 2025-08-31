@@ -156,6 +156,26 @@ body{
     margin: 20px auto;
 }
 
+#bottom-box-left, #bottom-box-right {
+    flex: 1 1 0;
+    background: #fff;
+    border: 5px solid #3498db;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+    min-width: 300px;
+    max-width: 600px;
+    color: #e74c3c;
+    font-size: 1.1rem;
+}
+#bottom-box-left img, #bottom-box-right img {
+    margin-top: 16px;
+    border-radius: 8px;
+    border: 2px solid #f1c40f;
+    max-width: 100%;
+    height: auto;
+}
+
 @media only screen and (min-width: 600px) {
 
     .main-content{
