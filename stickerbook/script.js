@@ -16,20 +16,20 @@ const images = [
 ];
 
 const texts = [
-    "Spread 1: Welcome to my sticker book!",
-    "Spread 2: Animals and Creatures.",
-    "Spread 3: Food and Treats.",
-    "Spread 4: Holographic Specials.",
-    "Spread 5: Custom Art Stickers.",
-    "Spread 6: Nature and Plants.",
-    "Spread 7: Cute Characters.",
-    "Spread 8: Travel Memories.",
-    "Spread 9: Limited Editions.",
-    "Spread 10: Artist Collaborations.",
-    "Spread 11: Fan Favorites.",
-    "Spread 12: Rare Finds.",
-    "Spread 13: Upcoming Releases.",
-    "Spread 14: Thank you for viewing!"
+    "Spread 1: The start to my Sicker Book!",
+    "Spread 2: Witch hat atelier spread!",
+    "Spread 3: Mix of stickers + We are Frogs.",
+    "Spread 4: randomcreativeshop + shopkimmysaur.",
+    "Spread 5: byizzyliu (formally mooooonbug).",
+    "Spread 6: Mix of stickers!",
+    "Spread 7: waffle_zn + wysteribun!",
+    "Spread 8: yogurtsnet + Mofusand + michiums!",
+    "Spread 9: Shadiaminart + fuyizu.",
+    "Spread 10: Sticker Planet.",
+    "Spread 11: Sticker Planet.",
+    "Spread 12: Sticker Planet.",
+    "Spread 13: Sticker Planet.",
+    "Spread 14: w0nkk0!"
 ];
 
 const bottomLeft = [
