@@ -133,6 +133,12 @@ body{
     opacity: 0;
 }
 
+.page-btn.active,
+.page-btn:hover {
+    background: #3498db;
+    color: #fff;
+}
+
 #oldlaptop, #newlaptop {
     display: block;
     margin: 30px auto;

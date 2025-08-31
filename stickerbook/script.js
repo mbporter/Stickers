@@ -1,34 +1,74 @@
 const images = [
-    '../images/image1.jpg',
-    '../images/image2.jpg',
-    '../images/image3.jpg',
-    '../images/image4.jpg'
+    'images/image1.jpg', 'images/image2.jpg',
+    'images/image3.jpg', 'images/image4.jpg',
+    'images/image5.jpg', 'images/image6.jpg',
+    'images/image7.jpg', 'images/image8.jpg',
+    'images/image9.jpg', 'images/image10.jpg',
+    'images/image11.jpg', 'images/image12.jpg',
+    'images/image13.jpg', 'images/image14.jpg',
+    'images/image15.jpg', 'images/image16.jpg',
+    'images/image17.jpg', 'images/image18.jpg',
+    'images/image19.jpg', 'images/image20.jpg',
+    'images/image21.jpg', 'images/image22.jpg',
+    'images/image23.jpg', 'images/image24.jpg',
+    'images/image25.jpg', 'images/image26.jpg',
+    'images/image27.jpg', 'images/image28.jpg'
 ];
 
 const texts = [
-    "Welcome to my sticker book! This spread features my favorite animal stickers.",
-    "Here are some cool food-themed stickers I collected last year.",
-    "These pages show my rare holographic stickers!",
-    "The last spread is all about my custom art stickers."
+    "Spread 1: Welcome to my sticker book!",
+    "Spread 2: Animals and Creatures.",
+    "Spread 3: Food and Treats.",
+    "Spread 4: Holographic Specials.",
+    "Spread 5: Custom Art Stickers.",
+    "Spread 6: Nature and Plants.",
+    "Spread 7: Cute Characters.",
+    "Spread 8: Travel Memories.",
+    "Spread 9: Limited Editions.",
+    "Spread 10: Artist Collaborations.",
+    "Spread 11: Fan Favorites.",
+    "Spread 12: Rare Finds.",
+    "Spread 13: Upcoming Releases.",
+    "Spread 14: Thank you for viewing!"
 ];
 
-// Bottom boxes: each entry is an object with text and image
 const bottomLeft = [
-    { text: "Left box for spread 1. Fun facts about these stickers!", img: "images/left1.jpg" },
-    { text: "Left box for spread 2. More info and artist credits.", img: "images/left2.jpg" },
-    { text: "Left box for spread 3. Holographic sticker details.", img: "images/left3.jpg" },
-    { text: "Left box for spread 4. Custom art sticker stories.", img: "images/left4.jpg" }
+    { text: "Left box for spread 1.", img: "images/left1.jpg" },
+    { text: "Left box for spread 2.", img: "images/left2.jpg" },
+    { text: "Left box for spread 3.", img: "images/left3.jpg" },
+    { text: "Left box for spread 4.", img: "images/left4.jpg" },
+    { text: "Left box for spread 5.", img: "images/left5.jpg" },
+    { text: "Left box for spread 6.", img: "images/left6.jpg" },
+    { text: "Left box for spread 7.", img: "images/left7.jpg" },
+    { text: "Left box for spread 8.", img: "images/left8.jpg" },
+    { text: "Left box for spread 9.", img: "images/left9.jpg" },
+    { text: "Left box for spread 10.", img: "images/left10.jpg" },
+    { text: "Left box for spread 11.", img: "images/left11.jpg" },
+    { text: "Left box for spread 12.", img: "images/left12.jpg" },
+    { text: "Left box for spread 13.", img: "images/left13.jpg" },
+    { text: "Left box for spread 14.", img: "images/left14.jpg" }
 ];
 
 const bottomRight = [
-    { text: "Right box for spread 1. Where to buy these stickers.", img: "images/right1.jpg" },
-    { text: "Right box for spread 2. My favorite sticker shops.", img: "images/right2.jpg" },
-    { text: "Right box for spread 3. How I organize my collection.", img: "images/right3.jpg" },
-    { text: "Right box for spread 4. Upcoming sticker releases.", img: "images/right4.jpg" }
+    { text: "Right box for spread 1.", img: "images/right1.jpg" },
+    { text: "Right box for spread 2.", img: "images/right2.jpg" },
+    { text: "Right box for spread 3.", img: "images/right3.jpg" },
+    { text: "Right box for spread 4.", img: "images/right4.jpg" },
+    { text: "Right box for spread 5.", img: "images/right5.jpg" },
+    { text: "Right box for spread 6.", img: "images/right6.jpg" },
+    { text: "Right box for spread 7.", img: "images/right7.jpg" },
+    { text: "Right box for spread 8.", img: "images/right8.jpg" },
+    { text: "Right box for spread 9.", img: "images/right9.jpg" },
+    { text: "Right box for spread 10.", img: "images/right10.jpg" },
+    { text: "Right box for spread 11.", img: "images/right11.jpg" },
+    { text: "Right box for spread 12.", img: "images/right12.jpg" },
+    { text: "Right box for spread 13.", img: "images/right13.jpg" },
+    { text: "Right box for spread 14.", img: "images/right14.jpg" }
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
     let currentPage = 0;
+
     const pageImgLeft = document.getElementById('page-img-left');
     const pageImgRight = document.getElementById('page-img-right');
     const prevBtn = document.getElementById('prev');
@@ -36,6 +76,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const textBox = document.getElementById('text-box');
     const bottomBoxLeft = document.getElementById('bottom-box-left');
     const bottomBoxRight = document.getElementById('bottom-box-right');
+    const flipbookPages = document.getElementById('flipbook-pages');
+
+    // Create page buttons
+    const pageButtons = [];
+    for (let i = 0; i < 14; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'page-btn';
+        btn.textContent = (i + 1);
+        btn.addEventListener('click', function() {
+            currentPage = i * 2;
+            updatePage();
+        });
+        flipbookPages.appendChild(btn);
+        pageButtons.push(btn);
+    }
+
+    function updateActiveButton() {
+        pageButtons.forEach((btn, idx) => {
+            btn.classList.toggle('active', Math.floor(currentPage / 2) === idx);
+        });
+    }
 
     function updatePage() {
         pageImgLeft.src = images[currentPage];
@@ -44,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         textBox.innerHTML = `<h2>${texts[spreadIndex] || ""}</h2>`;
 
-        // Update bottom boxes with text and image
         bottomBoxLeft.innerHTML = `
             <h2>${bottomLeft[spreadIndex]?.text || ""}</h2>
             <img src="${bottomLeft[spreadIndex]?.img || ""}" alt="Left box image">
@@ -53,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <h2>${bottomRight[spreadIndex]?.text || ""}</h2>
             <img src="${bottomRight[spreadIndex]?.img || ""}" alt="Right box image">
         `;
+
+        updateActiveButton();
     }
 
     prevBtn.addEventListener('click', () => {
