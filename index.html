@@ -1,164 +1,64 @@
 <!DOCTYPE html>
-<!--Written by mckionnon porter yayyy-->
+<!--Written by reigen_ily yayyy-->
 <html>
+<head>
+   <title> Sticker Collection </title>
+   <link rel="stylesheet" href="styles.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/blasten/turn.js@4/turn.min.js"></script>
+   <script src="script.js"></script>
+</head>
+<body>
 <div id="content">
 
-    <head>
-       <title> McKinnon Porter 224 </title>
-       <link rel="stylesheet" href="styles.css">
-    </head>
-<body>
-
 <header id="main-header">
-
-    <h1>Web Application 242 - McKinnon Porter</h1>
-    <h3>Web technologies to support client-server computing. Implementation of client-server applications.</h3>
-
+    <h1>Collection of my Stickers for others to look at and to know where to get them!</h1>
+    <h2>Thank you to all the artists that have made all of these!</h2>
 </header>
 <header id="main-header" class="padded-area">
     <nav id="main-nav">
-        
+        <a href="https://www.instagram.com/reigen_ily/" target="_blank"><h3>Intagram</h3></a>
+        <a href="https://x.com/sayomaclol" target="_blank"><h3>Twitter</h3></a>
+        <a href="https://www.etsy.com/people/ifkze5yfftayuhy4?ref=hdr_user_menu-profile" target="_blank"><h3>Etsy</h3></a>
+        <a href="./FavArt/index.html"><h3>Favorite Artists</h3></a>
 
     </nav>
-
 </header>
+
 <div class="main-content">
 
-    <div id="ass-1">
-    <a href="/Assignments/Assignemnt 1/index.html"><h2>Assignment 1</h2></a>
-    <a href="Assignments/Assignemnt 1/index.html">
-         <img src="images/ass-1.png">
-    </a>
-    <p>Made a basic website with headings, paragraphs, and images.</p>
-    </div>  
-
-    <div id="ass-2">
-    <a href="/Assignments/Assignemnt 2/index.html"><h2>Assignment 2</h2></a>
-    <img src="images/ass-2.png">
-    <p>Made another basic website with images photos and also added a stylesheet.</p>
+    <!-- Image flipbook -->
+    <div id="flipbook">
+        <button id="prev">⟨</button>
+        <img id="page-img-left" class="flipbook-img" src="images/image1.jpg" alt="Sticker Page Left">
+        <img id="page-img-right" class="flipbook-img" src="images/image2.jpg" alt="Sticker Page Right">
+        <button id="next">⟩</button>
     </div>
 
-    <div id="ass-3">
-    <a href="/Assignments/Assignemnt 3/index.html"><h2>Assignment 3</h2></a>
-    <img src="images/ass-3.png">
-    <p>Learned how to edit and style flex boxes.</p>
-    </div>
+    <div id="text-box">
+        <h2>This is my pride and joy Sticker book!Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id lectus eu ipsum gravida condimentum in nec elit. Fusce semper justo ut nibh eleifend, sit amet ullamcorper enim ultrices. Ut dapibus lacus leo, ut tincidunt enim finibus eu. Maecenas suscipit aliquam felis ut pellentesque. Pellentesque at tortor blandit purus feugiat efficitur. Vivamus pretium gravida lectus, et viverra enim aliquet a. Proin ullamcorper urna eget augue bibendum faucibus. Ut volutpat felis non purus accumsan, ut commodo lectus commodo. Mauris viverra sem vulputate odio gravida, et posuere ex finibus.
 
-    <div id="ass-5">
-        <a href="Assignments/Assignment 5/Index.html"><h2>Assignment 5</h2></a>
-        <img src="images/ass-5.png">
-        <p>Trying( really trying) to recreate a givin website.</p>
-    </div>
-    
-    <div id="ass-7">
-        <a href="Assignments/Assignment 7/index.html"><h2>Assignment 7</h2></a>
-        <img src="images/ass-7.png">
-        <p>Learning anf getting into JS.</p>
-    </div>
+    Sed blandit non leo ultrices laoreet. Fusce finibus non tellus ut scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada nisi quis enim feugiat, at fringilla risus interdum. Quisque eu ullamcorper sapien, ac faucibus nisi. Aenean vitae auctor arcu, sit amet tristique massa. Integer massa nunc, dictum vel quam at, maximus vehicula leo. Praesent tristique arcu sed leo fringilla finibus. Maecenas eu mollis ante, vitae eleifend arcu. Praesent porta est eu orci sollicitudin dignissim.
 
-    <div id="ass-8">
-        <a href="Assignments/Assignemnt 8/index.html"><h2>Assignment 8</h2></a>
-        <img src="images/ass-8.png">
-        <p>Java script if statments!.</p>
-    </div>
-    <div id="ass-9">
-        <a href="Assignments/Assignment 9/index.html"><h2>Assignment 9</h2></a>
-        <img src="images/ass-9.png">
-        <p>Java script looping statments!</p>
-    </div>
-    <div id="ass-10">
-        <a href="Assignments/Assignment 10/index.html"><h2>Assignment 10</h2></a>
-        <img src="images/ass-10.png">
-        <p>Using arrays to change images and text!</p>
-    </div>
-    <div id="ass-11">
-        <a href="Assignments/Assignemnt 11/index.html"><h2>Assignment 11</h2></a>
-        <img src="images/ass-11.png">
-        <p>Using classes and arrays to disply trees!</p>
-    </div>
+    Pellentesque eget ipsum massa. Ut tincidunt tempus commodo. Etiam elit dui, dignissim a dui ornare, fermentum feugiat mi. Donec finibus suscipit libero, ut porttitor ligula pulvinar eget. Duis non suscipit est, in imperdiet elit. Maecenas luctus commodo turpis, et lobortis dui pulvinar at. In hac habitasse platea dictumst. Nulla sit amet justo fermentum, mattis magna tempor, posuere lectus. Ut lobortis porttitor erat ut lacinia. Aenean purus neque, egestas a mi elementum, pretium sagittis lacus. Quisque vehicula nec dui vitae semper. Phasellus egestas turpis vel enim fringilla posuere mollis mattis orci. Pellentesque sit amet vestibulum est. Cras vel nisi vitae metus ornare efficitur.
 
-    <div id="node">
-        <a href=""><h2>Node assignment</h2></a>
-        <img src="images/node.png">
-        <a href="https://node-assignment-github-io.onrender.com/"><p>Render</p></a>
-        <a href="https://github.com/mbporter/node-assignment.github.io"><p>Github</p></a>
-    </div>
+    Integer ac felis id elit ultrices auctor id eget augue. Cras vel nisi vel turpis tempus mattis. Fusce et lacus vulputate, commodo lacus et, placerat turpis. Integer ut venenatis eros. Nam eget ultrices tortor. Phasellus aliquet nisi ligula, interdum dapibus neque mollis posuere. Sed ut tempus lorem. Suspendisse at turpis nisi.
 
-    <div id="ass-14">
-        <a href="Assignments/Assignemnt 11/index.html"><h2>Assignment 14</h2></a>
-        <img src="images/ass-14.png">
-        <a href="https://crafts14.onrender.com/"><p>Render</p></a>
-        <a href="https://github.com/mbporter/crafts.github.io"><p>Github</p></a>
-        <p>Using array and express and JSON ideas to make a server ran website.</p>
-    </div>
-    <div id="ass-15">
-        <a href="Assignments/Assignemnt 11/index.html"><h2>Assignment 15</h2></a>
-        <img src="images/ass-14.png">
-        <a href="https://ass-15-github-io.onrender.com"><p>Render</p></a>
-        <a href="https://github.com/mbporter/ass-15.github.io"><p>Github</p></a>
-        <p>Getting all the databases to kinda talk to eachother LOL.</p>
+    Nulla molestie purus hendrerit, vehicula nisi ut, vulputate quam. Vivamus bibendum at justo eget fringilla. Aliquam erat volutpat. Praesent tristique lorem at aliquet rhoncus. Nam semper mattis sapien ut ullamcorper. Duis mollis dolor eu sapien commodo gravida. Ut eget facilisis massa. Donec sit amet lobortis risus. Fusce augue erat, laoreet sit amet erat id, elementum maximus ex. Vestibulum quis pretium mi, nec fermentum neque. Sed sodales arcu imperdiet auctor dapibus. Nullam maximus ultrices ligula sed rhoncus. Nam condimentum, neque vel dignissim facilisis, sapien risus pretium lacus, vel sodales quam turpis ut ante. Suspendisse potenti. Praesent bibendum urna ut nisl feugiat vulputate.
+
+    </h2>
     </div>
 
 </div>
+
 <h1 id="pro">Project</h1>
 <div id="project">
-    
-    
-
-    <div id="pro-1">
-        <a href="Project/Part 1/index.html"><h2>Part 1</h2></a>
-        <img src="images/pro-1.png">
-        <p>Thinking of what my website should be of.</p>
-    </div>
-
-    <div id="pro-2">
-        <a href="Project/Part 2/index.html"><h2>Part 2</h2></a>
-        <img src="images/pro-2.png">
-        <p>Basic weire frame of what my website will be based around.</p>
-    </div>
-
-    <div id="pro-3">
-        <a href="Project/Part 3/Index.html"><h2>Part 3</h2></a>
-        <img src="images/pro-3.png">
-        <p>Basic Html and CSS for my new site.</p>
-    </div>
-    <div id="pro-4">
-        <a href="Project/Part 4/Index.html"><h2>Part 4</h2></a>
-        <img src="images/pro-4.png">
-        <p>Adding colors text and images!.</p>
-    </div>
-    <div id="pro-45">
-        <a href="Project/Part 4.5/Part 4/Index.html"><h2>Part 4.5</h2></a>
-        <img src="images/pro-45.png">
-        <p>Using peer and professor feedback improving my site.</p>
-    </div>
-    <div id="pro-5">
-        <a href="Project/Part 5/Part 4.5/Part 4/Index.html"><h2>Part 5</h2></a>
-        <img src="images/pro-45.png">
-        <p>Adding Json pairing to my website :0.</p>
-    </div>
-    <div id="pro-6">
-        <a href="Project/Part 6/Part 5/Part 4.5/Part 4/Index.html"><h2>Part 6</h2></a>
-        <img src="images/pro-45.png">
-        <p>Adding Forms and validation with javascript.</p>
-    </div>
-    <div id="final">
-        <a href="Project/Part 6/Part 5/Part 4.5/Part 4/Index.html"><h2>Final</h2></a>
-        <img src="images/final.png">
-        <a href="https://mbporter-github-io-1.onrender.com/"><p>Render</p></a>
-        <a href="https://github.com/mbporter/mbporter.github.io/tree/main/final"><p>Github</p></a>
-        
-        <p>Final.</p>
-    </div>
+    hello
 </div>
 
-
-
-
 <footer>
-    <p>mbporter.github.io</p>
+    <p>reigen_ily</p>
 </footer>
-
-
+</div>
 </body>
 </html>

@@ -1,13 +1,32 @@
 body{
-    background-color: #4169E1;
-
+    background-color: #fffbe6; /* off-white */
 }
 
 #main-header{
-    background-color: white;
-    border: 5px lightblue solid;
+    background-color: #ffffff; /* pure white */
+    border: 5px solid #3498db; /* bright blue */
+    color: #e74c3c; /* bright red for header text */
     display: block;
+    text-align: center; 
+}
+
+#main-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+
+#text-box{
     text-align: center;
+    color: #f1c40f; /* yellow text */
+    font-size: 15px;
+    margin: auto;
+    padding: 10px;
+    background-color: #ffffff; /* white */
+    border: solid #e74c3c 5px; /* bright red */
+    margin-top: 40px;
 }
 
 .main-content, #project{
@@ -16,34 +35,25 @@ body{
    flex-wrap: wrap;
 }
 
-#ass-1,#ass-2,#ass-3, #pro-1, #pro-2, #ass-5, #ass-7, #pro-3, #ass-8, #pro-4 , #ass-9, #pro-45, #ass-10,#ass-11, #node, #pro-5, #pro-6, #ass-14, #ass-15, #final {
-    background-color: aquamarine;
-    display: table;
-    border: 5px solid deepskyblue;
-    margin: 10px;
-    padding: 40px 20px;
-    text-align: center;
-    float: left;
-    clear: both;
-    width: 33%;
-}
 
 footer{
     text-align: center;
-    color: #AAAAAA;
+    color: #3498db; /* blue */
 }
 
-a:hover{
-    color: red;
- }
 a{
     text-decoration: none;
+    color: #3498db; /* blue */
 }
+a:hover{
+    color: #e74c3c; /* red */
+ }
 
 #pro{
     text-align: center;
-    border: solid lightgreen 2px;
-    background-color: cornflowerblue;
+    border: solid #f1c40f 2px; /* yellow */
+    background-color: #ffffff; /* white */
+    color: #e74c3c; /* red */
 }
 
 body{
@@ -54,13 +64,17 @@ body{
     list-style: none;
 }
 #main-nav li {
-    background-color: #949292;
+    background-color: #fffbe6; /* off-white */
     padding: 10px;
     margin: auto;
+    border: 2px solid #f1c40f; /* yellow */
 }
 #main-nav a {
     text-decoration: none;
-    color:white;
+    color: #3498db; /* blue */
+}
+#main-nav a:hover {
+    color: #e74c3c; /* red */
 }
 #menu-items li {
     text-align: center;
@@ -70,17 +84,66 @@ body{
     margin: auto;
 }
 
+#flipbook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff; /* white */
+    border: 2px solid #f1c40f; /* yellow */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(52,152,219,0.15); /* blue shadow */
+    width: 800px;
+    margin: 40px auto;
+}
+#flipbook img {
+    width: 380px;
+    height: 500px;
+    margin: 0 15px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 8px;
+    border: 2px solid #e74c3c; /* red */
+    background: #fffbe6; /* off-white */
+}
+#flipbook button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #3498db; /* blue */
+    transition: color 0.2s;
+}
+#flipbook button:hover {
+    color: #f1c40f; /* yellow */
+}
+
+.flipbook-img {
+    transition: transform 0.6s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.6s;
+    opacity: 1;
+}
+
+.flipbook-img.flip-out {
+    transform: translateX(-100px) scale(0.95) rotateY(-30deg);
+    opacity: 0;
+}
+
+.flipbook-img.flip-in {
+    transform: translateX(100px) scale(0.95) rotateY(30deg);
+    opacity: 0;
+}
+
 @media only screen and (min-width: 600px) {
 
     .main-content{
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        flex: auto;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
     }
 
-    #ass-1,#ass-2,#ass-3, #pro-1, #pro-2, #ass-5, #ass-7, #pro-3, #ass-8, #pro-4, #ass-9, #pro-45, #ass-10,#ass-11, #node, #pro-5, #pro-6, #ass-14, #ass-15, #final{
-        flex: 1;
-    }
     #menu-items {
         display: flex;
     }
@@ -94,10 +157,21 @@ body{
     }
 
     #menu-items a:hover {
-        border-bottom: 3px solid rgb(160, 153, 153);
+        border-bottom: 3px solid #e74c3c; /* red */
     }
 
     #menu-toggle {
         display: none;
+    }
+
+    #flipbook {
+        flex: 0 0 800px;
+    }
+
+    #text-box {
+        flex: 1 1 400px;
+        max-width: 500px;
+        min-width: 300px;
+        box-sizing: border-box;
     }
 }
