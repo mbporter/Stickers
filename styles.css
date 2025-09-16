@@ -9,7 +9,7 @@ body{
     display: block;
     text-align: center; 
 }
-
+ 
 #main-nav{
     display: flex;
     flex-direction: row;
@@ -187,11 +187,17 @@ body{
     box-shadow: 0 4px 16px rgba(231,76,60,0.12); /* subtle red shadow */
     max-width: 90%;
     transition: border-color 0.3s, box-shadow 0.3s;
+
 }
 
 #oldlaptop:hover, #newlaptop:hover {
     border-color: #f1c40f; /* yellow on hover */
     box-shadow: 0 8px 24px rgba(241,196,15,0.18); /* yellow shadow on hover */
+}
+
+#oldlaptop image, #newlaptop image {
+    max-width: 600px;
+    height: 400px;
 }
 
 #section-div {
