@@ -1,5 +1,5 @@
 const images = [
-    'Images/image1.jpeg', ' Images/image2.jpeg',
+    'Images/image1.jpeg', ' Images/image1.jpeg',
     'Images/image3.jpeg', 'Images/image4.jpeg',
     'Images/image5.jpeg', 'Images/image6.jpeg',
     'images/image7.jpeg', 'images/image8.jpeg',
