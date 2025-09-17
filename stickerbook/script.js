@@ -1,20 +1,19 @@
 const images = [
-    'images/image1.jpg', 'images/image2.jpg',
-    'images/image3.jpg', 'images/image4.jpg',
-    'images/image5.jpg', 'images/image6.jpg',
-    'images/image7.jpg', 'images/image8.jpg',
-    'images/image9.jpg', 'images/image10.jpg',
-    'images/image11.jpg', 'images/image12.jpg',
-    'images/image13.jpg', 'images/image14.jpg',
-    'images/image15.jpg', 'images/image16.jpg',
-    'images/image17.jpg', 'images/image18.jpg',
-    'images/image19.jpg', 'images/image20.jpg',
-    'images/image21.jpg', 'images/image22.jpg',
-    'images/image23.jpg', 'images/image24.jpg',
-    'images/image25.jpg', 'images/image26.jpg',
-    'images/image27.jpg', 'images/image28.jpg'
+    '../Images/image1.jpeg', '../Images/image1.jpeg',
+    '../Images/image3.jpeg', '../Images/image4.jpeg',
+    '../Images/image5.jpeg', '../Images/image6.jpeg',
+    '../Images/image7.jpeg', '../Images/image8.jpeg',
+    '../Images/image9.jpeg', '../Images/image10.jpeg',
+    '../Images/image11.jpeg', '../Images/image12.jpeg',
+    '../Images/image13.jpeg', '../Images/image14.jpeg',
+    '../Images/image15.jpeg', '../Images/image16.jpeg',
+    '../Images/image17.jpeg', '../Images/image18.jpeg',
+    '../Images/image19.jpeg', '../Images/image20.jpeg',
+    '../Images/image21.jpeg', '../Images/image22.jpeg',
+    '../Images/image23.jpeg', '../Images/image24.jpeg',
+    '../Images/image25.jpeg', '../Images/image26.jpeg',
+    '../Images/image27.jpeg', '../Images/image28.jpeg'
 ];
-
 const texts = [
     "Spread 1: The start to my Sicker Book!",
     "Spread 2: Witch hat atelier spread!",
