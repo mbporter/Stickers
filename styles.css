@@ -110,9 +110,11 @@ body{
     display: inline-block;
     vertical-align: middle;
     border-radius: 8px;
-    border: 2px solid #e74c3c; /* red */
-    background: #fffbe6; /* off-white */
+    border: 2px solid #e74c3c; 
+    background: #fffbe6; 
 }
+
+
 #flipbook button {
     font-size: 2rem;
     background: none;
@@ -125,6 +127,8 @@ body{
 #flipbook button:hover {
     color: #e74c3c;
 }
+
+.main-content, #project { display: flex; flex-wrap: wrap; }
 
 .flipbook-img {
     width: 120px;
