@@ -45,10 +45,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updatePage() {
-        pageImgLeft.src = images[currentPage];
-        pageImgRight.src = images[currentPage + 1] || '';
-        updateActiveButton();
-    }
+    pageImgLeft.onerror = () => { pageImgLeft.src = 'Images/oops.png'; };
+    pageImgRight.onerror = () => { pageImgRight.src = 'Images/oops.png'; };
+
+    pageImgLeft.src = images[currentPage];
+    pageImgRight.src = images[currentPage + 1] || 'Images/oops.png';
+
+    updateActiveButton();
+}
 
     function animateFlip(direction, targetPage = null) {
         pageImgLeft.classList.remove('flip-in', 'flip-out');

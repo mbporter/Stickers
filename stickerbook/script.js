@@ -98,23 +98,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updatePage() {
-        pageImgLeft.src = images[currentPage];
-        pageImgRight.src = images[currentPage + 1] || '';
-        const spreadIndex = Math.floor(currentPage / 2);
+    // Fallbacks for the main spread images
+    pageImgLeft.onerror = () => { pageImgLeft.src = '../Images/oops.png'; };
+    pageImgRight.onerror = () => { pageImgRight.src = '../Images/oops.png'; };
 
-        textBox.innerHTML = `<h2>${texts[spreadIndex] || ""}</h2>`;
+    pageImgLeft.src = images[currentPage];
+    pageImgRight.src = images[currentPage + 1] || '../Images/oops.png';
 
-        bottomBoxLeft.innerHTML = `
-            <h2>${bottomLeft[spreadIndex]?.text || ""}</h2>
-            <img src="${bottomLeft[spreadIndex]?.img || ""}" alt="Left box image">
-        `;
-        bottomBoxRight.innerHTML = `
-            <h2>${bottomRight[spreadIndex]?.text || ""}</h2>
-            <img src="${bottomRight[spreadIndex]?.img || ""}" alt="Right box image">
-        `;
+    const spreadIndex = Math.floor(currentPage / 2);
 
-        updateActiveButton();
-    }
+    textBox.innerHTML = `<h2>${texts[spreadIndex] || ""}</h2>`;
+
+    // bottom left box
+    bottomBoxLeft.innerHTML = `
+        <h2>${bottomLeft[spreadIndex]?.text || ""}</h2>
+        <img src="${bottomLeft[spreadIndex]?.img || '../Images/oops.png'}" 
+             alt="Left box image" 
+             onerror="this.src='../Images/oops.png';">
+    `;
+
+    // bottom right box
+    bottomBoxRight.innerHTML = `
+        <h2>${bottomRight[spreadIndex]?.text || ""}</h2>
+        <img src="${bottomRight[spreadIndex]?.img || '../Images/oops.png'}" 
+             alt="Right box image" 
+             onerror="this.src='../Images/oops.png';">
+    `;
+
+    updateActiveButton();
+}
 
     prevBtn.addEventListener('click', () => {
         if (currentPage > 0) {
