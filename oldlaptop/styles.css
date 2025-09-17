@@ -2,6 +2,8 @@ body{
     background-color: #fffbe6; /* off-white */
 }
 
+
+
 #main-header{
     background-color: #ffffff; /* pure white */
     border: 5px solid #3498db; /* bright blue */
@@ -184,6 +186,11 @@ body{
     align-items: flex-start;
     gap: 24px;
     margin: 24px auto;
+}
+
+#soon{
+    display: block;
+    margin: 40px auto;
 }
 
 @media only screen and (min-width: 600px) {
