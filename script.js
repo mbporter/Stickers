@@ -2,17 +2,17 @@ const images = [
     'Images/image1.jpeg', ' Images/image1.jpeg',
     'Images/image3.jpeg', 'Images/image4.jpeg',
     'Images/image5.jpeg', 'Images/image6.jpeg',
-    'images/image7.jpeg', 'images/image8.jpeg',
-    'images/image9.jpeg', 'images/image10.jpeg',
-    'images/image11.jpeg', 'images/image12.jpeg',
-    'images/image13.jpeg', 'images/image14.jpeg',
-    'images/image15.jpeg', 'images/image16.jpeg',
-    'images/image17.jpeg', 'images/image18.jpeg',
-    'images/image19.jpeg', 'images/image20.jpeg',
-    'images/image21.jpeg', 'images/image22.jpeg',
-    'images/image23.jpeg', 'images/image24.jpeg',
-    'images/image25.jpeg', 'images/image26.jpeg',
-    'images/image27.jpeg', 'images/image28.jpeg'
+    'Images/image7.jpeg', 'Images/image8.jpeg',
+    'Images/image9.jpeg', 'Images/image10.jpeg',
+    'Images/image11.jpeg', 'Images/image12.jpeg',
+    'Images/image13.jpeg', 'Images/image14.jpeg',
+    'Images/image15.jpeg', 'Images/image16.jpeg',
+    'Images/image17.jpeg', 'Images/image18.jpeg',
+    'Images/image19.jpeg', 'Images/image20.jpeg',
+    'Images/image21.jpeg', 'Images/image22.jpeg',
+    'Images/image23.jpeg', 'Images/image24.jpeg',
+    'Images/image25.jpeg', 'Images/image26.jpeg',
+    'Images/image27.jpeg', 'Images/image28.jpeg'
 ];
  
 document.addEventListener('DOMContentLoaded', function() {
