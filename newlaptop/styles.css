@@ -8,6 +8,7 @@ body{
     color: #e74c3c; /* bright red for header text */
     display: block;
     text-align: center; 
+    border-radius: 10px;
 }
 
 #main-nav{
@@ -27,6 +28,7 @@ body{
     background-color: #ffffff; /* white */
     border: solid #e74c3c 5px; /* bright red */
     margin-top: 40px;
+    
 }
 
 .main-content, #project{
