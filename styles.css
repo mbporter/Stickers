@@ -12,6 +12,9 @@ body{
     margin-top: 10px;
 }
  
+.main-content, #project { display: flex; flex-wrap: wrap; }
+
+
 #main-nav{
     display: flex;
     flex-direction: row;
@@ -128,7 +131,6 @@ body{
     color: #e74c3c;
 }
 
-.main-content, #project { display: flex; flex-wrap: wrap; }
 
 .flipbook-img {
     width: 120px;
