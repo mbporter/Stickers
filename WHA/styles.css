@@ -95,6 +95,52 @@ body{
 
 
 
+.infinite-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.scroll-content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.scroll-items {
+    display: flex;
+    animation: scroll 60s linear infinite;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.scroll-items img {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.scroll-items img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Pause animation on hover */
+.infinite-scroll-container:hover .scroll-items {
+    animation-play-state: paused;
+}
+
 @media only screen and (min-width: 600px) {
 
     .main-content{
