@@ -1,0 +1,323 @@
+body{
+    background-color: #fffbe6; /* off-white */
+}
+
+#main-header{
+    background-color: #ffffff; /* pure white */
+    border: 5px solid #3498db; /* bright blue */
+    color: #e74c3c; /* bright red for header text */
+    display: block;
+    text-align: center; 
+    border-radius: 10px;
+    margin-top: 10px;
+}
+ 
+.main-content, #project { display: flex; flex-wrap: wrap; }
+
+
+#main-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; 
+}
+
+#text-box{
+    text-align: center;
+    color: #f1c40f; /* yellow text */
+    font-size: 15px;
+    margin: auto;
+    padding: 10px;
+    background-color: #ffffff; /* white */
+    border: solid #e74c3c 5px; /* bright red */
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+
+
+.main-content, #project{
+   display: flex;
+   flex: 1;
+   flex-wrap: wrap;
+}
+
+
+footer{
+    text-align: center;
+    color: #3498db; /* blue */
+}
+
+a{
+    text-decoration: none;
+    color: #3498db; /* blue */
+}
+a:hover{
+    color: #e74c3c; /* red */
+ }
+
+#pro{
+    text-align: center;
+    border: solid #f1c40f 2px; /* yellow */
+    background-color: #ffffff; /* white */
+    color: #e74c3c; /* red */
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#main-nav ul {
+    padding-left: 0px;
+    list-style: none;
+}
+#main-nav li {
+    background-color: #fffbe6; /* off-white */
+    padding: 10px;
+    margin: auto;
+    border: 2px solid #f1c40f; /* yellow */
+}
+#main-nav a {
+    text-decoration: none;
+    color: #3498db; /* blue */
+}
+#main-nav a:hover {
+    color: #e74c3c; /* red */
+}
+#menu-items li {
+    text-align: center;
+}
+.padded-area {
+    padding: 5px;
+    margin: auto;
+}
+
+#flipbook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(52,152,219,0.15);
+    width: 340px;
+    margin: 40px auto;
+}
+
+#flipbook img {
+    width: 280px;
+    height: 400px;
+    margin: 0 15px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 8px;
+    border: 2px solid #e74c3c; 
+    background: #fffbe6; 
+}
+
+
+#flipbook button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #3498db;
+    transition: color 0.2s;
+    margin: 0 10px;
+}
+#flipbook button:hover {
+    color: #e74c3c;
+}
+
+
+.flipbook-img {
+    width: 120px;
+    height: 160px;
+    margin: 0 4px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 8px;
+    border: 2px solid #f1c40f;
+    background: #fffbe6;
+    transition: transform 0.6s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.6s;
+    opacity: 1;
+}
+
+.flipbook-img.flip-out {
+    transform: translateX(-100px) scale(0.95) rotateY(-30deg);
+    opacity: 0;
+}
+
+.flipbook-img.flip-in {
+    transform: translateX(100px) scale(0.95) rotateY(30deg);
+    opacity: 0;
+}
+
+#flipbook-pages {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    margin: 8px 0 0 0;
+    width: 100%;
+}
+    
+
+.page-btn {
+    padding: 1px 5px;
+    border: 1px solid #3498db;
+    background: #fff;
+    color: #3498db;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+    min-width: 18px;
+    min-height: 18px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.page-btn.active,
+.page-btn:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+#oldlaptop, #newlaptop {
+    flex: 1 1 0;
+    display: block;
+    margin: 0 auto;
+    align-self: center;
+    padding: 16px;
+    background: #fffbe6; /* off-white background */
+    border: 4px solid #3498db; /* blue border */
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(231,76,60,0.12); /* subtle red shadow */
+    max-width: 90%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+}
+
+#oldlaptop:hover, #newlaptop:hover {
+    border-color: #f1c40f; /* yellow on hover */
+    box-shadow: 0 8px 24px rgba(241,196,15,0.18); /* yellow shadow on hover */
+}
+
+#oldlaptop image, #newlaptop image {
+    max-width: 600px;
+    height: 400px;
+}
+
+#section-div {
+    text-align: center;
+    color: #34db6c; /* blue */
+    margin: 20px auto;
+}
+
+#project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+#project #text-box {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    min-width: 300px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .main-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    #menu-items {
+        display: flex;
+    }
+
+    #menu-items li {
+        flex: 1;
+    }
+
+    #menu-items a {
+        border-bottom: 3px solid transparent;
+    }
+
+    #menu-items a:hover {
+        border-bottom: 3px solid #e74c3c; /* red */
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #flipbook {
+        flex: 0 0 800px;
+    }
+
+    #text-box {
+        flex: 1 1 400px;
+        max-width: 500px;
+        min-width: 300px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 600px) {
+    #flipbook {
+        width: 98vw;
+        padding: 8px;
+        margin: 12px auto;
+    }
+    .flipbook-inner {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .flipbook-img {
+        width: 80vw;
+        max-width: 220px;
+        height: auto;
+        margin: 6px 0;
+    }
+    #flipbook button {
+        font-size: 1.5rem;
+        margin: 6px 0;
+    }
+    #flipbook-pages {
+        flex-wrap: wrap;
+        gap: 2px;
+        margin: 6px 0 0 0;
+    }
+    .page-btn {
+        font-size: 0.9rem;
+        min-width: 22px;
+        min-height: 22px;
+        padding: 2px 6px;
+    }
+    #main-header, #main-nav, #text-box, #project, #pro, footer {
+        padding: 6px;
+        font-size: 1rem;
+    }
+    .main-content, #project, #stickers {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
