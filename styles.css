@@ -165,23 +165,47 @@ body{
     
 
 .page-btn {
-    padding: 1px 5px;
-    border: 1px solid #3498db;
+    padding: 4px 8px;
+    border: 2px solid #3498db;
     background: #fff;
     color: #3498db;
-    border-radius: 3px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 0.8rem;
-    min-width: 18px;
-    min-height: 18px;
-    transition: background 0.2s, color 0.2s;
+    font-weight: 700;
+    font-size: 0.9rem;
+    min-width: 26px;
+    min-height: 26px;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-.page-btn.active,
 .page-btn:hover {
+    transform: translateY(-2px);
+}
+
+.page-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52,152,219,0.14);
+}
+
+.page-btn.active {
     background: #3498db;
     color: #fff;
+    /* Use an evenly-distributed blur-only shadow (no vertical offset)
+       so it appears centered around the button instead of shifted down. */
+    box-shadow: 0 0 10px rgba(52,152,219,0.20);
+    /* Slightly smaller scale so the element doesn't visually shift
+       and make the shadow look off-center. */
+    transform: scale(1.04);
+    border-color: #2c80b8;
+}
+
+/* Disabled/locked state (useful if JS wants to temporarily lock buttons during animation) */
+.page-btn.locked,
+.page-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
 }
 
 #oldlaptop, #newlaptop {

@@ -1,4 +1,6 @@
-const images = [
+// Keep a raw list and normalize (trim) entries so accidental spaces or
+// inconsistent extensions don't break indexing or counting.
+const imagesRaw = [
     'Images/image2.jpg', ' Images/image1.jpeg',
     'Images/image3.jpeg', 'Images/image4.jpeg',
     'Images/image5.jpeg', 'Images/image6.jpeg',
@@ -14,10 +16,15 @@ const images = [
     'Images/image25.jpeg', 'Images/image26.jpeg',
     'Images/image27.jpeg', 'Images/image28.jpeg'
 ];
+
+// Trim whitespace and normalize the array used by the flipbook logic.
+const images = imagesRaw.map(s => s.trim());
  
 document.addEventListener('DOMContentLoaded', function() {
     let currentPage = 0;
-    const totalSpreads = images.length / 2; // 14 spreads
+    // Use ceil so an odd number of images still produces the correct
+    // number of spreads (last spread will show an 'oops' or single image).
+    const totalSpreads = Math.ceil(images.length / 2);
 
     const pageImgLeft = document.getElementById('page-img-left');
     const pageImgRight = document.getElementById('page-img-right');
@@ -31,8 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const btn = document.createElement('button');
         btn.className = 'page-btn';
         btn.textContent = (i + 1);
+        // store target page (left image index) on the button for clarity
+        btn.dataset.page = i * 2;
         btn.addEventListener('click', function() {
-            animateFlip('jump', i * 2);
+            // Provide immediate visual feedback (show active state right away)
+            pageButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            // Jump to the requested spread (animation will update the page after)
+            animateFlip('jump', Number(this.dataset.page));
         });
         flipbookPages.appendChild(btn);
         pageButtons.push(btn);
@@ -45,14 +58,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updatePage() {
-    pageImgLeft.onerror = () => { pageImgLeft.src = 'Images/oops.png'; };
-    pageImgRight.onerror = () => { pageImgRight.src = 'Images/oops.png'; };
+        // Ensure image error fallback
+        pageImgLeft.onerror = () => { pageImgLeft.src = 'Images/oops.png'; };
+        pageImgRight.onerror = () => { pageImgRight.src = 'Images/oops.png'; };
 
-    pageImgLeft.src = images[currentPage];
-    pageImgRight.src = images[currentPage + 1] || 'Images/oops.png';
+        // Clamp currentPage so we don't go out of bounds. Keep it even so it
+        // always represents the left page index of the spread.
+        if (currentPage < 0) currentPage = 0;
+        if (currentPage > images.length - 2) currentPage = Math.max(0, images.length - 2);
 
-    updateActiveButton();
-}
+        pageImgLeft.src = images[currentPage] || 'Images/oops.png';
+        pageImgRight.src = images[currentPage + 1] || 'Images/oops.png';
+
+        updateActiveButton();
+    }
 
     function animateFlip(direction, targetPage = null) {
         pageImgLeft.classList.remove('flip-in', 'flip-out');
@@ -67,13 +86,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         setTimeout(() => {
-            if (direction === 'jump' && targetPage !== null) {
-                currentPage = targetPage;
-            } else if (direction === 'next') {
-                currentPage += 2;
-            } else if (direction === 'prev') {
-                currentPage -= 2;
-            }
+                if (direction === 'jump' && targetPage !== null) {
+                    currentPage = targetPage;
+                } else if (direction === 'next') {
+                    currentPage += 2;
+                } else if (direction === 'prev') {
+                    currentPage -= 2;
+                }
             updatePage();
             pageImgLeft.classList.remove('flip-in', 'flip-out');
             pageImgRight.classList.remove('flip-in', 'flip-out');
